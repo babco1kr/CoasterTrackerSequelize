@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <img id="headerImg" src="/assets/img/roller-coaster.png">
+  </div>
+  <div id="content-area">
+    <div class="row" id = "rideArea">
+      <div class="col-sm-4 text-center">
+        <h3>Coasters To Ride:</h3>
+        {{!-- Coasters to ride buttons --}}
+        <ul>
+          {{#each coasters}}
+          {{#unless rode}}
+          <div class="row">
+            <button class="change-rode" data-id="{{id}}" data-newrode="{{rode}}">
+              {{coaster_name}}
+            </button>
+          </div>
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+      {{!-- Instructions for the application --}}
+      <div class="col-sm-4 text-center" id="instructions">
+        <p>Add coasters you would like to ride below, and once you have ridden them simply click on them to move them to
+          the ridden side.</p>
+        <p>(if you clicked the wrong one, you can click them again on the ridden side to move them back to the to ride
+          side)</p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <h3>Coasters Ridden:</h3>
+        {{!-- Coasters ridden buttons --}}
+        <ul>
+          {{#each coasters}}
+          {{#if rode}}
+          <div class="row">
+            <button class="change-rode" data-id="{{id}}" data-newrode="{{rode}}">
+              {{coaster_name}}
+            </button>
+          </div>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{!-- Area to add a new coaster --}}
+    <div class="row">
+      <div class="col justify-content-center text-center">
+        <form class="create-form">
+
+          <div class="form-group">
+            <label id="addCoaster" for="ca"><b>Enter Coaster name to add:</b></label><br>
+            <input type="text" id="coaster" name="name">
+          </div>
+          <button  class = "btn btn-primary" id="add" type="submit">Add Coaster</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

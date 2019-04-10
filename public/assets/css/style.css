@@ -1,0 +1,53 @@
+body {
+    background-image: url(../img/background.jpg);
+    height: 100%;
+}
+
+/* This makes the buttons transparent */
+.change-rode {
+    width: 85%;
+    margin-bottom: 10px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#rideArea {
+    padding: 0;
+}
+
+.change-rode:hover {
+    background-color: rgb(85, 198, 250, .5);
+}
+
+#add, #coaster {
+    width: 25%;
+}
+
+#headerImg {
+    width: 10%;
+    height: 10%;
+    margin-bottom: 30px;
+}
+
+#instructions {
+    padding-top: 7%;
+}
+
+#addCoaster {
+    font-size: 20px;
+}
+
+.create-form {
+    padding-top: 3%;
+}
+
+#content-area {
+    background-color: rgba(255, 255, 255, .75);
+    padding-bottom: 10%;
+    padding-top: 2%;
+    margin-top: 2%;
+}
