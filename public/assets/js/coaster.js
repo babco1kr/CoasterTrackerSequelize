@@ -1,7 +1,7 @@
 // Makes sure the DOM loads before anything happens
 $(function() {
     // On click for the coasters to move them from to ride to the ridden side
-    $(".change-rode").on("click", function(event){
+    $(".info").on("click", function(event){
         event.preventDefault();
         let id = $(this).data("id");
         let rode = $(this).data("newrode");
@@ -44,17 +44,15 @@ $(function() {
         });
     });
 
+    $(".delete").on("click", function(event) {
+        event.preventDefault();
+        let id = $(this).data("id");
 
+        $.ajax("/api/coasters/" + id, {
+            type: "DELETE"
+        }).then(function() {
+            location.reload();
+        })
 
-
-
-
-
-
-
-
-
-
-
-
+    })
 })

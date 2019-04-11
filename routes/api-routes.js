@@ -12,7 +12,6 @@ module.exports = function(app) {
     })
 
     app.put("/api/coasters/:id", function (req, res){
-        console.log(req.body.rode);
         db.Coaster.update({
             rode: req.body.rode
         }, {
@@ -25,6 +24,16 @@ module.exports = function(app) {
             } else {
                 res.status(200).end();
             }
+        })
+    })
+
+    app.delete("/api/coasters/:id", function(req, res) {
+        db.Coaster.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(data) {
+            res.json(data);
         })
     })
 

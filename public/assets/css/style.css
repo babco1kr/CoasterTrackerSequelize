@@ -4,8 +4,7 @@ body {
 }
 
 /* This makes the buttons transparent */
-.change-rode {
-    width: 85%;
+.change-rode, .change-rode1 {
     margin-bottom: 10px;
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -15,11 +14,30 @@ body {
     outline:none;
 }
 
+.change-rode {
+    width: 85%;
+}
+
+.change-rode1 {
+    width: 80%
+}
+
+.delete {
+    outline:none;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(255, 0, 0, .5)
+}
+
+.delete:hover {
+    background-color: rgb(255, 0, 0, .75)
+}
+
 #rideArea {
     padding: 0;
 }
 
-.change-rode:hover {
+.change-rode:hover, .change-rode1:hover {
     background-color: rgb(85, 198, 250, .5);
 }
 
